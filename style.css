@@ -7,19 +7,24 @@
 	--text-h2: 22px;
 	--text-content: 15px;
 	--text-btn: 13px;
+	--text-btn-skills: 13px;
 
 	--font-family: 'Inter', sans-serif;
 
 	--line-height: 85px;
 	--line-height-sub: 35px;
 	--line-height-paragraph: 22px;
+	--line-height-edu-skills: 90px;
 
 	--height-header: 250px;
 	--height-about: 200px;
 	--height-work: 400px;
+	--height-education: 250px;
+	--height-skills: 200px;
 
 	--main-content-width: 800px;
 	--work-content-width: 700px;
+	--skills-content-width: 750px;
 }
 
 * {
@@ -36,7 +41,7 @@ main {
 	height: auto;
 	flex-direction: column;
 	font-family: var(--font-family);
-	/* background-color: rgb(240, 237, 237); */
+	background-color: rgb(30, 25, 25);
 }
 
 main {
@@ -64,8 +69,8 @@ main {
 }
 
 .header__profilepic {
-	width: 130px;
-	height: 130px;
+	width: 140px;
+	height: 140px;
 	border-radius: 50%;
 	border: 2px solid #086fb3;
 }
@@ -120,6 +125,7 @@ main {
 	border: 2px solid #086fb3;
 	cursor: pointer;
 	font-size: var(--text-btn);
+	font-weight: 700;
 }
 
 /* WORK EXPERIENCE */
@@ -183,10 +189,13 @@ main {
 	font-size: 14px;
 }
 
-/* Education */
+/* EDUCATION SECTION */
 
+.section-education {
+	height: var(--height-education);
+}
 .section-education .heading-secondary {
-	line-height: 90px;
+	line-height: var(--line-height-edu-skills);
 }
 
 .section-school .section-school__cont .school .school__profile {
@@ -238,4 +247,46 @@ main {
 .school__dates {
 	color: rgb(116, 114, 114);
 	font-size: 14px;
+}
+
+/* SKILLS SECTION */
+
+.section-skills {
+	width: var(--skills-content-width);
+	height: var(--height-skills);
+}
+
+.section-skills .heading-secondary {
+	line-height: var(--line-height-edu-skills);
+}
+
+.skills {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.skills__icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	background-color: black;
+	width: auto;
+	border-radius: 8px;
+	border: 2px solid #086fb3;
+	cursor: pointer;
+	height: auto;
+	font-size: var(--text-btn-skills);
+}
+
+.skills__icon:not(:last-child) .skills__icon-img {
+	filter: brightness(0) invert(1);
+	height: 22px;
+	width: 22px;
+}
+
+.skills__icon-text {
+	color: white;
+	padding-left: 2px;
 }
