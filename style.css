@@ -1,0 +1,60 @@
+:root {
+	/* FONT SIZE */
+	--text-sm: 12px;
+	--text-base: 19px;
+	--text-paragraph: 18px;
+	--text-h1: 60px;
+
+	--font-family: 'Inter', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center; /* centers horizontally */
+	align-items: center; /* centers vertically */
+	font-family: var(--font-family);
+}
+
+.header {
+	display: flex;
+	height: 300px;
+	align-items: center;
+}
+.heading-primary--main {
+	font-size: var(--text-h1);
+	font-family: var(--font-family);
+	letter-spacing: -4px;
+	line-height: 85px;
+	font-weight: 600;
+	text-rendering: optimizeLegibility;
+}
+.heading-primary--sub {
+	font-size: var(--text-base);
+	font-weight: 400;
+	line-height: 25px;
+	font-family: var(--font-family);
+}
+
+.header__profilepic {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	border: 2px solid #3498db;
+}
+
+.heading-primary {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+.header__profilepic-box {
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+}
