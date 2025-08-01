@@ -15,9 +15,11 @@
 	--line-height-paragraph: 22px;
 
 	--height-header: 250px;
-	--height-about: 300px;
+	--height-about: 200px;
+	--height-work: 400px;
 
-	--main-content-width: 900px;
+	--main-content-width: 800px;
+	--work-content-width: 700px;
 }
 
 * {
@@ -26,7 +28,8 @@
 	padding: 0;
 }
 
-body {
+body,
+main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -56,7 +59,7 @@ main {
 }
 .heading-primary--sub {
 	font-size: var(--text-base);
-	font-weight: 350;
+	font-weight: 300;
 	line-height: 25px;
 }
 
@@ -81,6 +84,7 @@ main {
 /* ABOUT ME */
 
 .section-about {
+	display: flex;
 	height: var(--height-about);
 	flex-direction: column;
 	text-align: left;
@@ -116,4 +120,122 @@ main {
 	border: 2px solid #086fb3;
 	cursor: pointer;
 	font-size: var(--text-btn);
+}
+
+/* WORK EXPERIENCE */
+.section-work {
+	width: var(--work-content-width);
+	height: var(--height-work);
+}
+
+.section-work .heading-secondary {
+	line-height: 100px;
+}
+
+.section-work .section-work__cont .company .company__profile {
+	display: flex;
+}
+
+.section-work .section-work__cont {
+	display: flex;
+	flex-direction: column;
+}
+
+.company {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 90px;
+}
+
+.company__name {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.company__position {
+	font-size: 11.8px;
+	font-weight: 400;
+}
+
+.company__info {
+	width: 220px;
+	display: flex;
+	flex-direction: row;
+}
+.company__logo {
+	height: 50px;
+	width: 50px;
+	border: 2px solid #b8abab;
+	object-fit: cover;
+	object-fit: contain;
+	border-radius: 50%;
+}
+
+.company__profile {
+	display: flex;
+	flex-direction: column;
+	padding-left: 15px;
+}
+
+.company__dates {
+	color: rgb(116, 114, 114);
+	font-size: 14px;
+}
+
+/* Education */
+
+.section-education .heading-secondary {
+	line-height: 90px;
+}
+
+.section-school .section-school__cont .school .school__profile {
+	display: flex;
+}
+
+.section-work .section-work__cont {
+	display: flex;
+	flex-direction: column;
+}
+
+.school {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 70px;
+}
+
+.school__name {
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.school__course {
+	font-size: 11px;
+	font-weight: 400;
+}
+
+.school__info {
+	width: 400px;
+	display: flex;
+	flex-direction: row;
+}
+.school__logo {
+	height: 50px;
+	width: 50px;
+	border: 2px solid #b8abab;
+	object-fit: cover;
+	object-fit: contain;
+	border-radius: 50%;
+}
+
+.school__profile {
+	display: flex;
+	flex-direction: column;
+	padding-left: 15px;
+}
+
+.school__dates {
+	color: rgb(116, 114, 114);
+	font-size: 14px;
 }
