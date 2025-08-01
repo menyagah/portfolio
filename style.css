@@ -13,6 +13,11 @@
 	--line-height: 85px;
 	--line-height-sub: 35px;
 	--line-height-paragraph: 22px;
+
+	--height-header: 250px;
+	--height-about: 300px;
+
+	--main-content-width: 900px;
 }
 
 * {
@@ -31,9 +36,15 @@ body {
 	/* background-color: rgb(240, 237, 237); */
 }
 
+main {
+	width: var(--main-content-width);
+}
+
+/* HEADER */
+
 .header {
 	display: flex;
-	height: 250px;
+	height: var(--height-header);
 	align-items: center;
 }
 .heading-primary--main {
@@ -68,22 +79,25 @@ body {
 }
 
 /* ABOUT ME */
+
 .section-about {
-	display: flex;
-	height: 300px;
+	height: var(--height-about);
 	flex-direction: column;
 	text-align: left;
 	align-items: center;
-	width: 900px;
+}
+
+.heading-secondary,
+.paragraph,
+.btn-about {
+	display: flex;
+	width: var(--main-content-width);
 }
 
 .heading-secondary {
-	display: flex;
 	justify-content: flex-start;
 	line-height: var(--line-height-sub);
 	font-size: var(--text-h2);
-	font-family: var(--font-family);
-	width: 900px;
 }
 
 .paragraph {
@@ -93,8 +107,6 @@ body {
 }
 
 .btn-about {
-	width: 900px;
-	display: flex;
 	justify-content: flex-end;
 }
 
