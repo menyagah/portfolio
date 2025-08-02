@@ -350,7 +350,6 @@ main {
 		max-width: 33em;
 	}
 	.heading-secondary {
-		background-color: #086fb3;
 		line-height: var(--line-height-sub);
 		font-size: var(--text-h2);
 	}
@@ -551,7 +550,6 @@ main {
 
 @media only screen and (max-width: 34.68em) {
 	.section-skills {
-		background-color: #086fb3;
 		max-width: 40rem;
 		height: var(--height-work);
 		align-items: center;
