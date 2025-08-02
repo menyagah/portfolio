@@ -1,34 +1,43 @@
 :root {
 	/* FONT SIZE */
-	--text-sm: 12px;
-	--text-base: 19px;
-	--text-paragraph: 18px;
-	--text-h1: 60px;
-	--text-h2: 22px;
-	--text-content: 15px;
-	--text-btn: 13px;
-	--text-btn-skills: 13px;
+	--text-sm: 1.2rem;
+	--text-base: 1.9rem;
+	--text-paragraph: 1.8rem;
+	--text-h1: 6rem;
+	--text-h2: 2rem;
+	--text-content: 1.5rem;
+	--text-btn: 1.3rem;
+	--text-btn-skills: 1.3rem;
 
 	--font-family: 'Inter', sans-serif;
 
-	--line-height: 85px;
-	--line-height-sub: 35px;
-	--line-height-paragraph: 22px;
-	--line-height-edu-skills: 90px;
+	--line-height: 8.5rem;
+	--line-height-sub: 3.5rem;
+	--line-height-paragraph: 2.2rem;
+	--line-height-edu-skills: 9rem;
 
-	--height-header: 250px;
-	--height-about: 200px;
-	--height-work: 400px;
-	--height-education: 250px;
-	--height-skills: 200px;
+	--height-header: 28rem;
+	--height-about: 20rem;
+	--height-work: 30rem;
+	--height-education: 25rem;
+	--height-skills: 20rem;
 
-	--main-content-width: 800px;
-	--work-content-width: 700px;
-	--skills-content-width: 750px;
+	--header-content-width: 65rem;
+	--main-content-width: 80rem;
+	--work-content-width: 65rem;
+	--skills-content-width: 65rem;
+
+	--border-color: 0.2rem solid #086fb3;
 }
 
-* {
-	box-sizing: border-box;
+html {
+	font-size: 62.5%;
+}
+
+*,
+a {
+	box-sizing: inherit;
+	text-decoration: none;
 	margin: 0;
 	padding: 0;
 }
@@ -40,12 +49,13 @@ main {
 	align-items: center;
 	height: auto;
 	flex-direction: column;
+	text-decoration: none;
 	font-family: var(--font-family);
-	background-color: rgb(30, 25, 25);
+	/* background-color: rgb(30, 25, 25); */
 }
 
 main {
-	width: var(--main-content-width);
+	max-width: var(--main-content-width);
 }
 
 /* HEADER */
@@ -54,6 +64,7 @@ main {
 	display: flex;
 	height: var(--height-header);
 	align-items: center;
+	width: var(--header-content-width);
 }
 .heading-primary--main {
 	font-size: var(--text-h1);
@@ -65,14 +76,14 @@ main {
 .heading-primary--sub {
 	font-size: var(--text-base);
 	font-weight: 300;
-	line-height: 25px;
+	line-height: 2.5rem;
 }
 
 .header__profilepic {
-	width: 140px;
-	height: 140px;
+	width: 14rem;
+	height: 14rem;
 	border-radius: 50%;
-	border: 2px solid #086fb3;
+	border: var(--border-color);
 }
 
 .heading-primary {
@@ -83,7 +94,7 @@ main {
 .header__profilepic-box {
 	display: flex;
 	align-items: center;
-	padding-left: 30px;
+	padding-left: 3rem;
 }
 
 /* ABOUT ME */
@@ -120,12 +131,13 @@ main {
 }
 
 .btn {
-	padding: 7px;
-	border-radius: 8px;
-	border: 2px solid #086fb3;
+	padding: 0.7rem;
+	border-radius: 0.8rem;
+	border: var(--border-color);
 	cursor: pointer;
 	font-size: var(--text-btn);
 	font-weight: 700;
+	color: black;
 }
 
 /* WORK EXPERIENCE */
@@ -135,7 +147,7 @@ main {
 }
 
 .section-work .heading-secondary {
-	line-height: 100px;
+	line-height: 4rem;
 }
 
 .section-work .section-work__cont .company .company__profile {
@@ -151,28 +163,31 @@ main {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height: 90px;
+	align-items: center;
+	height: 7rem;
+	line-height: 1.5rem;
 }
 
 .company__name {
-	font-size: 14px;
-	font-weight: 600;
+	font-size: 1.4rem;
+	font-weight: 500;
 }
 
 .company__position {
-	font-size: 11.8px;
-	font-weight: 400;
+	font-size: 1.2rem;
+	font-weight: 300;
 }
 
 .company__info {
-	width: 220px;
+	width: 28rem;
+	align-items: center;
 	display: flex;
 	flex-direction: row;
 }
 .company__logo {
-	height: 50px;
-	width: 50px;
-	border: 2px solid #b8abab;
+	height: 4.5rem;
+	width: 4.5rem;
+	border: var(--border-color);
 	object-fit: cover;
 	object-fit: contain;
 	border-radius: 50%;
@@ -181,12 +196,13 @@ main {
 .company__profile {
 	display: flex;
 	flex-direction: column;
-	padding-left: 15px;
+	padding-left: 1.5rem;
 }
 
 .company__dates {
+	align-items: center;
 	color: rgb(116, 114, 114);
-	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 /* EDUCATION SECTION */
@@ -211,28 +227,28 @@ main {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height: 70px;
+	height: 7rem;
 }
 
 .school__name {
-	font-size: 15px;
+	font-size: 1.5rem;
 	font-weight: 600;
 }
 
 .school__course {
-	font-size: 11px;
+	font-size: 1.1rem;
 	font-weight: 400;
 }
 
 .school__info {
-	width: 400px;
+	width: 40rem;
 	display: flex;
 	flex-direction: row;
 }
 .school__logo {
-	height: 50px;
-	width: 50px;
-	border: 2px solid #b8abab;
+	height: 5rem;
+	width: 5rem;
+	border: var(--border-color);
 	object-fit: cover;
 	object-fit: contain;
 	border-radius: 50%;
@@ -246,7 +262,7 @@ main {
 
 .school__dates {
 	color: rgb(116, 114, 114);
-	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 /* SKILLS SECTION */
@@ -270,11 +286,11 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 5px;
+	padding: 0.5rem;
 	background-color: black;
 	width: auto;
-	border-radius: 8px;
-	border: 2px solid #086fb3;
+	border-radius: 0.8rem;
+	border: var(--border-color);
 	cursor: pointer;
 	height: auto;
 	font-size: var(--text-btn-skills);
@@ -282,11 +298,101 @@ main {
 
 .skills__icon:not(:last-child) .skills__icon-img {
 	filter: brightness(0) invert(1);
-	height: 22px;
-	width: 22px;
+	height: 2.2rem;
+	width: 2.2rem;
 }
 
 .skills__icon-text {
 	color: white;
-	padding-left: 2px;
+	padding-left: 0.2rem;
+}
+
+/* PROJECTS */
+.section-projects {
+	height: 80rem;
+}
+.section-projects .heading-secondary {
+	display: flex;
+	justify-content: center;
+}
+
+.section-projects .paragraph {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.project {
+	display: flex;
+	margin-top: 5.5rem;
+	flex-direction: column;
+}
+
+.project__profile {
+	display: flex;
+	flex-direction: column;
+	padding-left: 4rem;
+	line-height: 3.5rem;
+}
+
+.project__timeline {
+	margin-top: 1rem;
+}
+
+.project__logo {
+	height: 5rem;
+	width: 5rem;
+	overflow: hidden;
+	position: relative;
+	border-radius: 50%;
+	border: var(--border-color);
+	background-color: #fff9f9;
+}
+
+.project__name {
+	font-size: 1.6rem;
+}
+.project__description {
+	font-size: 1.3rem;
+	line-height: var(--line-height-paragraph);
+	color: rgb(116, 114, 114);
+}
+
+.project__dates {
+	color: rgb(116, 114, 114);
+	font-size: 12px;
+}
+
+.vertical-line {
+	position: absolute;
+	width: 0.1rem; /* thin line */
+	height: 72.1rem; /* adjust height as needed */
+	background-color: #000; /* line color */
+	border: none; /* remove default border */
+	margin: 0 2.5rem; /* optional spacing */
+}
+
+.dashed-line {
+	border: none;
+	border-top: 1px dashed #ccc;
+	width: 80%;
+	margin: 1rem 0; /* optional spacing */
+	margin-left: 2.4rem;
+}
+
+.project__link {
+	background-color: #000;
+	border: var(--border-color);
+	width: 9rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.8rem;
+}
+
+.project__button {
+	color: #fff;
+}
+
+.project__icon-text {
+	font-size: 1.5rem;
 }
