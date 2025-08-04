@@ -176,8 +176,8 @@ body {
 		padding-left: 1rem;
 	}
 	.header__profilepic {
-		width: 10rem;
-		height: 10rem;
+		width: 20rem;
+		height: 20rem;
 		border-radius: 50%;
 		border: var(--border-color);
 	}
@@ -212,8 +212,8 @@ body {
 		padding-left: 1rem;
 	}
 	.header__profilepic {
-		width: 10rem;
-		height: 10rem;
+		width: 15rem;
+		height: 15rem;
 		border-radius: 50%;
 		border: var(--border-color);
 	}
@@ -248,8 +248,8 @@ body {
 		padding-left: 0.8rem;
 	}
 	.header__profilepic {
-		width: 8rem;
-		height: 8rem;
+		width: 10rem;
+		height: 10rem;
 		border-radius: 50%;
 		border: var(--border-color);
 	}
