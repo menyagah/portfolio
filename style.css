@@ -84,8 +84,8 @@ body {
 	/* background-color: rgb(30, 25, 25); */
 }
 
-main {
-}
+/* main {
+} */
 
 @media only screen and (max-width: 50.63em) {
 	main {
@@ -399,6 +399,16 @@ main {
 		height: 7rem;
 		line-height: 1.5rem;
 	}
+	.company__name {
+		font-size: 1rem;
+		font-weight: 300;
+	}
+	.company__info {
+		width: 20rem;
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 .section-work .heading-secondary {
@@ -517,6 +527,47 @@ main {
 .school__dates {
 	color: rgb(116, 114, 114);
 	font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 49.75em) {
+	.school__name {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	.school__course {
+		font-size: 1rem;
+		font-weight: 400;
+	}
+
+	.school__info {
+		width: 30rem;
+		display: flex;
+		flex-direction: row;
+	}
+	.school__logo {
+		height: 3rem;
+		width: 3rem;
+		border: var(--border-color);
+		object-fit: cover;
+		object-fit: contain;
+		border-radius: 50%;
+	}
+
+	.school__profile {
+		display: flex;
+		flex-direction: column;
+		padding-left: 1rem;
+	}
+
+	.school__dates {
+		color: rgb(116, 114, 114);
+		font-size: 1.4rem;
+	}
+	.school__dates {
+		color: rgb(116, 114, 114);
+		font-size: 1.4rem;
+	}
 }
 
 /* SKILLS SECTION */
@@ -699,4 +750,18 @@ main {
 
 .project__icon-text {
 	font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 50.63em) {
+	.section-projects .paragraph {
+		text-align: center;
+		font-size: 1.2rem;
+	}
+}
+
+@media only screen and (max-width: 40.25em) {
+	.section-projects .paragraph {
+		text-align: center;
+		font-size: 1.3rem;
+	}
 }
