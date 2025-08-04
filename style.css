@@ -30,7 +30,7 @@
 	--header-content-width-sm: 55rem;
 	--main-content-width: 80rem;
 	--work-content-width: 65rem;
-	--work-content-width-sm: 55rem;
+	--work-content-width-sm: 40rem;
 	--skills-content-width: 65rem;
 	--skills-content-width-sm: 55rem;
 
@@ -386,10 +386,18 @@ main {
 	height: var(--height-work);
 }
 
-@media only screen and (max-width: 41.13em) {
+@media only screen and (max-width: 43.56em) {
 	.section-work {
 		width: var(--work-content-width-sm);
 		height: var(--height-work);
+	}
+	.company {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 7rem;
+		line-height: 1.5rem;
 	}
 }
 
