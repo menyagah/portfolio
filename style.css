@@ -104,7 +104,7 @@ body {
 }
 @media only screen and (max-width: 34.68em) {
 	main {
-		max-width: 40rem;
+		max-width: 35rem;
 	}
 }
 
@@ -284,8 +284,8 @@ body {
 		padding-left: 0.8rem;
 	}
 	.header__profilepic {
-		width: 8rem;
-		height: 8rem;
+		width: 10rem;
+		height: 10rem;
 		border-radius: 50%;
 		border: var(--border-color);
 	}
@@ -758,9 +758,17 @@ body {
 		font-size: 1.3rem;
 		flex-wrap: wrap;
 		max-width: 45rem;
+		text-align: left;
 	}
 	.project__description {
 		flex-wrap: wrap;
+	}
+	.section-projects .heading-secondary {
+		display: flex;
+		justify-content: flex-start;
+	}
+	.vertical-line {
+		height: 84.1rem; /* adjust height as needed */
 	}
 }
 
