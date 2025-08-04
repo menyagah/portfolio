@@ -759,6 +759,9 @@ body {
 		flex-wrap: wrap;
 		max-width: 45rem;
 	}
+	.project__description {
+		flex-wrap: wrap;
+	}
 }
 
 @media only screen and (max-width: 40.25em) {
