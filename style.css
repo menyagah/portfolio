@@ -118,7 +118,7 @@ body {
 }
 .heading-primary--main {
 	font-size: var(--text-h1);
-	letter-spacing: -4px;
+	letter-spacing: 1px;
 	line-height: var(--line-height-main);
 	font-weight: 600;
 	text-rendering: optimizeLegibility;
@@ -160,7 +160,7 @@ body {
 	}
 	.heading-primary--main {
 		font-size: var(--text-h1);
-		letter-spacing: -4px;
+		letter-spacing: 1px;
 		line-height: var(--line-height-main);
 		font-weight: 600;
 		text-rendering: optimizeLegibility;
@@ -232,7 +232,7 @@ body {
 	}
 	.heading-primary--main {
 		font-size: var(--text-h1);
-		letter-spacing: -4px;
+		letter-spacing: 1px;
 		line-height: var(--line-height-main);
 		font-weight: 600;
 		text-rendering: optimizeLegibility;
@@ -268,7 +268,7 @@ body {
 	}
 	.heading-primary--main {
 		font-size: var(--text-h1);
-		letter-spacing: -4px;
+		letter-spacing: 1px;
 		line-height: var(--line-height-main);
 		font-weight: 600;
 		text-rendering: optimizeLegibility;
