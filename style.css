@@ -409,7 +409,7 @@ main {
 .vertical-line {
 	position: absolute;
 	width: 0.1rem; /* thin line */
-	min-height: 85vh; /* adjust height as needed */
+	min-height: 105vh; /* adjust height as needed */
 	background-color: #000; /* line color */
 	border: none; /* remove default border */
 	margin: 0 2.5rem; /* optional spacing */
