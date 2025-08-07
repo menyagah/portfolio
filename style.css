@@ -440,3 +440,148 @@ main {
 .project__icon-text {
 	font-size: 1.5rem;
 }
+
+/* Contact*/
+
+.contact {
+	border-radius: 3px;
+	box-shadow: 0 1.5 4rem rgba(8, 10, 19, 0.8);
+	margin-top: 3rem;
+	min-height: 50vh;
+	padding: 7rem 0;
+}
+.contact__form {
+	width: 100%;
+	padding: 6rem;
+}
+
+.form__group:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.form__input {
+	font-size: 1.5rem;
+	font-family: inherit;
+	color: inherit;
+	padding: 1.5rem 2rem;
+	border-radius: 2px;
+	background-color: rgba(206, 206, 206, 0.9);
+	border: rgba(101, 97, 97, 0.9);
+	border-bottom: 3px solid transparent;
+	/* width: 90%; */
+	width: 100%;
+	display: block;
+}
+.form__input:focus:invalid {
+	border-bottom: 3px solid #ff5e00;
+}
+.form__input::-webkit-input-placeholder {
+	color: #999;
+}
+.form__input:focus {
+	outline: none;
+	box-shadow: 0 1rem 2rem rgba(8, 10, 19, 0.8);
+	border-bottom: 3px solid #00ff00;
+}
+
+.form__label {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-left: 2rem;
+	margin-top: 0.7rem;
+	display: block;
+	transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-4rem);
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 1.5rem 4rem;
+	display: inline-block;
+	border-radius: 0.6rem;
+	border: 0.3px solid #fdf9f9;
+	transition: all 0.5s;
+	position: relative;
+	border: none;
+	cursor: pointer;
+}
+
+.btn--green {
+	background-color: #303e7e;
+	color: white;
+}
+
+.btn--white {
+	background-color: #17181a9a;
+	color: #fdf9f9;
+}
+.btn--white::after {
+	background-color: #080a13ec;
+	border: 0.5px solid #fdf9f9;
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px #080a13ec;
+	background-color: #080a13ec;
+	color: #fdf9f9;
+	border: 0.2px solid #fdf9f9;
+}
+.btn:hover::after {
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
+}
+
+.btn:active {
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px #080a13ec;
+}
+
+.btn::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all 0.5s;
+}
+
+.btn--animated {
+	animation: moveInBottom 0.5s ease-out 0.75s;
+	animation-fill-mode: backwards;
+}
+
+.btn-text:link,
+.btn-text:visited {
+	font-size: 1.7rem;
+	color: #080a13ec;
+	display: inline-block;
+	text-decoration: none;
+	border-bottom: 1px solid #080a13ec;
+	padding: 3px;
+	transition: all 0.2s;
+}
+
+.btn-text:hover {
+	background-color: #080a13ec;
+	color: #fdf9f9;
+	box-shadow: 0 1rem 2rem #080a13ec;
+	transform: translateY(-2px);
+}
+
+.btn-text:active {
+	box-shadow: 0 0.5rem 1rem #080a13ec;
+	transform: translateY(0);
+}
