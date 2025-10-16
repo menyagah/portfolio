@@ -955,3 +955,103 @@ html.light-mode .modal-dialog h3,
 html.light-mode .modal-dialog h2 {
 	color: #0f172a;
 }
+
+.intro-heading {
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;
+	margin-top: 12px;
+	color: var(--text);
+	line-height: 1.4;
+}
+
+.wave {
+	display: inline-block;
+	animation: wave 2s infinite;
+	transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(14deg);
+	}
+	20% {
+		transform: rotate(-8deg);
+	}
+	30% {
+		transform: rotate(14deg);
+	}
+	40% {
+		transform: rotate(-4deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	60%,
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.hello {
+	color: #facc15; /* bright yellow */
+	font-weight: 800;
+}
+
+.highlight {
+	color: var(--accent-2);
+}
+
+/* Floating name animation 🌤️ */
+.floating-name {
+	display: inline-block;
+	position: relative;
+	animation: floatCloud 6s ease-in-out infinite;
+	text-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+/* Soft floating motion */
+@keyframes floatCloud {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+/* ☁️ Glowing "cloud shadow" effect */
+.floating-name::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 110%;
+	transform: translateX(-50%);
+	width: 140%;
+	height: 16px;
+	background: radial-gradient(
+		ellipse at center,
+		rgba(139, 92, 246, 0.25) 0%,
+		rgba(59, 130, 246, 0.15) 50%,
+		transparent 100%
+	);
+	border-radius: 50%;
+	filter: blur(10px);
+	opacity: 0.6;
+	animation: floatShadow 6s ease-in-out infinite;
+}
+
+/* Make the cloud "shadow" move with the text */
+@keyframes floatShadow {
+	0%,
+	100% {
+		transform: translate(-50%, 0);
+	}
+	50% {
+		transform: translate(-50%, -4px);
+	}
+}
