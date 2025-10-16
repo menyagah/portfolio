@@ -17,14 +17,27 @@ html {
 	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
 }
 html.light-mode {
-	--bg-1: #f8fafc;
-	--bg-2: #ffffff;
-	--card: #ffffff;
-	--muted: #475569;
+	--bg-1: #e5ecf3; /* light slate */
+	--bg-2: #cbd5e1; /* bluish gray */
+	--card: rgba(255, 255, 255, 0.9);
+	--muted: #334155;
 	--text: #0f172a;
 	--accent: #0ea5e9;
 	--accent-2: #2563eb;
 }
+
+/* Apply a subtle soft gradient background to light mode */
+html.light-mode body {
+	background: linear-gradient(145deg, var(--bg-1), var(--bg-2));
+	color: var(--text);
+	transition: background 0.3s, color 0.3s;
+}
+
+html.light-mode .card {
+	background: var(--card);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
 body {
 	margin: 0;
 	background: radial-gradient(circle at 20% 20%, var(--bg-1), var(--bg-2));
@@ -1013,7 +1026,15 @@ html.light-mode .modal-dialog h2 {
 	text-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
 }
 
-/* Soft floating motion */
+/* 🌤️ Floating name animation */
+.floating-name {
+	display: inline-block;
+	position: relative;
+	animation: floatCloud 6s ease-in-out infinite;
+	text-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+/* Smooth floating motion */
 @keyframes floatCloud {
 	0%,
 	100% {
@@ -1024,7 +1045,7 @@ html.light-mode .modal-dialog h2 {
 	}
 }
 
-/* ☁️ Glowing "cloud shadow" effect */
+/* ☁️ Cloud shadow (default for dark mode) */
 .floating-name::after {
 	content: '';
 	position: absolute;
@@ -1041,11 +1062,11 @@ html.light-mode .modal-dialog h2 {
 	);
 	border-radius: 50%;
 	filter: blur(10px);
-	opacity: 0.6;
+	opacity: 0.65;
 	animation: floatShadow 6s ease-in-out infinite;
 }
 
-/* Make the cloud "shadow" move with the text */
+/* Shadow floats with the name */
 @keyframes floatShadow {
 	0%,
 	100% {
@@ -1054,4 +1075,57 @@ html.light-mode .modal-dialog h2 {
 	50% {
 		transform: translate(-50%, -4px);
 	}
+}
+
+/* 🌞 Light mode enhancement — darker cloud & subtle text glow */
+html.light-mode .floating-name {
+	text-shadow: 0 2px 10px rgba(59, 130, 246, 0.35);
+}
+
+html.light-mode .floating-name::after {
+	background: radial-gradient(
+		ellipse at center,
+		rgba(59, 130, 246, 0.35) 0%,
+		rgba(37, 99, 235, 0.25) 50%,
+		transparent 100%
+	);
+	filter: blur(12px);
+	opacity: 0.7;
+}
+
+/* ===============================
+   🌞 Animated Theme Toggle Button
+================================ */
+#theme-toggle {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	font-size: 22px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	color: var(--accent);
+	transition: transform 0.6s ease, color 0.6s ease;
+}
+
+/* Sun glow when light mode is active */
+html.light-mode #theme-toggle {
+	color: #facc15; /* golden yellow */
+	text-shadow: 0 0 12px rgba(250, 204, 21, 0.6),
+		0 0 25px rgba(250, 204, 21, 0.3);
+	transform: rotate(360deg) scale(1.2);
+}
+
+/* Moon glow when dark mode is active */
+html:not(.light-mode) #theme-toggle {
+	color: #93c5fd; /* soft blue */
+	text-shadow: 0 0 10px rgba(147, 197, 253, 0.5),
+		0 0 20px rgba(147, 197, 253, 0.3);
+	transform: rotate(-360deg) scale(1.1);
+}
+
+/* Nice subtle hover state */
+#theme-toggle:hover {
+	transform: scale(1.3) rotate(15deg);
+	transition: transform 0.4s ease;
 }

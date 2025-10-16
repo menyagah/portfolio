@@ -5,12 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	const themeToggle = document.getElementById('theme-toggle')
 	const saved = localStorage.getItem('theme')
 	const isLight = saved === 'light'
+
+	// Initial state
 	document.documentElement.classList.toggle('light-mode', isLight)
-	themeToggle.textContent = isLight ? '🌙' : '☀️'
+	themeToggle.textContent = isLight ? '☀️' : '🌙'
 
 	themeToggle.addEventListener('click', () => {
 		const nowLight = document.documentElement.classList.toggle('light-mode')
-		themeToggle.textContent = nowLight ? '🌙' : '☀️'
+		themeToggle.textContent = nowLight ? '☀️' : '🌙'
+
+		// Animate sunrise / sunset effect
+		themeToggle.classList.add('toggle-anim')
+		setTimeout(() => themeToggle.classList.remove('toggle-anim'), 600)
+
 		localStorage.setItem('theme', nowLight ? 'light' : 'dark')
 	})
 
